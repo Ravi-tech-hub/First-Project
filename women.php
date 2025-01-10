@@ -26,39 +26,39 @@
 
         <section class="flex flex-row  justify-center mt-5">
             <div class="px-6">
-                <a href=""><img src="image/winter.jpg" alt="" class="object-cover rounded-full h-12 w-12"></a>
+                <a href=""><img src="images/winter.jpg" alt="" class="object-cover rounded-full h-12 w-12"></a>
                 <figcaption>Winter</figcaption>
             </div>
             <div class="px-6">
-                <a href=""><img src="image/kurtas.jpg" alt="" class="object-cover rounded-full h-12 w-12"></a>
+                <a href=""><img src="images/kurtas.jpg" alt="" class="object-cover rounded-full h-12 w-12"></a>
                 <figcaption>kurtas</figcaption>
             </div>
             <div class="px-6">
-                <a href=""><img src="image/tops.jpg" alt="" class="object-cover rounded-full h-12 w-12"></a>
+                <a href=""><img src="images/tops.jpg" alt="" class="object-cover rounded-full h-12 w-12"></a>
                 <figcaption>Tops</figcaption>
             </div>
             <div class="px-6">
-                <a href=""><img src="image/sarees.jpg" alt="" class="object-cover rounded-full h-12 w-12"></a>
+                <a href=""><img src="images/sarees.jpg" alt="" class="object-cover rounded-full h-12 w-12"></a>
                 <figcaption>Sarees</figcaption>
             </div>
             <div class="px-6">
-                <a href=""><img src="image/suits.jpg" alt="" class="object-cover rounded-full h-12 w-12"></a>
+                <a href=""><img src="images/suits.jpg" alt="" class="object-cover rounded-full h-12 w-12"></a>
                 <figcaption>suits</figcaption>
             </div>
             <div class="px-6">
-                <a href=""><img src="image/bottoms.jpg" alt="" class="object-cover rounded-full h-12 w-12"></a>
+                <a href=""><img src="images/bottoms.jpg" alt="" class="object-cover rounded-full h-12 w-12"></a>
                 <figcaption>Bottoms</figcaption>
             </div>
             <div class="px-6">
-                <a href=""><img src="image/ethnicsets.jpg" alt="" class="object-cover rounded-full h-12 w-12"></a>
+                <a href=""><img src="images/ethnicsets.jpg" alt="" class="object-cover rounded-full h-12 w-12"></a>
                 <figcaption>Ethnic set</figcaption>
             </div>
             <div class="px-6">
-                <a href=""><img src="image/dresses.jpg" alt="" class="object-cover rounded-full h-12 w-12"></a>
+                <a href=""><img src="images/dresses.jpg" alt="" class="object-cover rounded-full h-12 w-12"></a>
                 <figcaption>Dresses</figcaption>
             </div>
             <div class="px-6">
-                <a href=""><img src="image/lehenga.webp" alt="" class="object-cover rounded-full h-12 w-12"></a>
+                <a href=""><img src="images/lehenga.webp" alt="" class="object-cover rounded-full h-12 w-12"></a>
                 <figcaption>Lehenga</figcaption>
             </div>
         </section>

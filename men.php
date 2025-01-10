@@ -23,35 +23,35 @@
 
         <section class="flex flex-row  justify-center mt-5">
             <div class="px-6">
-                <a href=""><img src="image/winters.jpg" alt="" class="object-cover rounded-full h-12 w-12"></a>
+                <a href=""><img src="images/winters.jpg" alt="" class="object-cover rounded-full h-12 w-12"></a>
                 <figcaption>Winter</figcaption>
             </div>
             <div class="px-6">
-                <a href=""><img src="image/tshirts.jpg" alt="" class="object-cover rounded-full h-12 w-12"></a>
+                <a href=""><img src="images/tshirts.jpg" alt="" class="object-cover rounded-full h-12 w-12"></a>
                 <figcaption>Tshirt</figcaption>
             </div>
             <div class="px-6">
-                <a href=""><img src="image/shirts.jpg" alt="" class="object-cover rounded-full h-12 w-12"></a>
+                <a href=""><img src="images/shirts.jpg" alt="" class="object-cover rounded-full h-12 w-12"></a>
                 <figcaption>Shirt</figcaption>
             </div>
             <div class="px-6">
-                <a href=""><img src="image/jeans.jpg" alt="" class="object-cover rounded-full h-12 w-12"></a>
+                <a href=""><img src="images/jeans.jpg" alt="" class="object-cover rounded-full h-12 w-12"></a>
                 <figcaption>Jeans</figcaption>
             </div>
             <div class="px-6">
-                <a href=""><img src="image/trousers.jpg" alt="" class="object-cover rounded-full h-12 w-12"></a>
+                <a href=""><img src="images/trousers.jpg" alt="" class="object-cover rounded-full h-12 w-12"></a>
                 <figcaption>Trouser</figcaption>
             </div>
             <div class="px-6">
-                <a href=""><img src="image/ethnicset.jpg" alt="" class="object-cover rounded-full h-12 w-12"></a>
+                <a href=""><img src="images/ethnicset.jpg" alt="" class="object-cover rounded-full h-12 w-12"></a>
                 <figcaption>Ethnic set</figcaption>
             </div>
             <div class="px-6">
-                <a href=""><img src="image/blazer.jpg" alt="" class="object-cover rounded-full h-12 w-12"></a>
+                <a href=""><img src="images/blazer.jpg" alt="" class="object-cover rounded-full h-12 w-12"></a>
                 <figcaption>Blazer</figcaption>
             </div>
             <div class="px-6">
-                <a href=""><img src="image/cargo.jpg" alt="" class="object-cover rounded-full h-12 w-12"></a>
+                <a href=""><img src="images/cargo.jpg" alt="" class="object-cover rounded-full h-12 w-12"></a>
                 <figcaption>Cargo</figcaption>
             </div>
         </section>

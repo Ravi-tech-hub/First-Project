@@ -23,39 +23,39 @@
 
     <section class="flex flex-row  justify-center mt-5">
         <div class="px-6">
-            <a href=""><img src="image/winterwear.jpg" alt="" class="object-cover rounded-full h-12 w-12"></a>
+            <a href=""><img src="images/winterwear.jpg" alt="" class="object-cover rounded-full h-12 w-12"></a>
            <figcaption>Winter</figcaption>
         </div>
         <div class="px-6">
-            <a href=""><img src="image/frocks.jpg" alt="" class="object-cover rounded-full h-12 w-12"></a>
+            <a href=""><img src="images/frocks.jpg" alt="" class="object-cover rounded-full h-12 w-12"></a>
            <figcaption>Frocks</figcaption>
         </div>
         <div class="px-6">
-            <a href=""><img src="image/t_shirts.jpg" alt="" class="object-cover rounded-full h-12 w-12"></a>
+            <a href=""><img src="images/t_shirts.jpg" alt="" class="object-cover rounded-full h-12 w-12"></a>
            <figcaption>Tshirt</figcaption>
         </div>
         <div class="px-6">
-            <a href=""><img src="image/_shirts.jpg" alt="" class="object-cover rounded-full h-12 w-12"></a>
+            <a href=""><img src="images/_shirts.jpg" alt="" class="object-cover rounded-full h-12 w-12"></a>
            <figcaption>Shirt</figcaption>
         </div>
         <div class="px-6">
-            <a href=""><img src="image/_tops.jpg" alt="" class="object-cover rounded-full h-12 w-12"></a>
+            <a href=""><img src="images/_tops.jpg" alt="" class="object-cover rounded-full h-12 w-12"></a>
            <figcaption>Tops</figcaption>
         </div>
         <div class="px-6">
-            <a href=""><img src="image/ethnic_wear.jpg" alt="" class="object-cover rounded-full h-12 w-12"></a>
+            <a href=""><img src="images/ethnic_wear.jpg" alt="" class="object-cover rounded-full h-12 w-12"></a>
            <figcaption>Ethnic set</figcaption>
         </div>
         <div class="px-6">
-            <a href=""><img src="image/_bottom.jpg" alt="" class="object-cover rounded-full h-12 w-12"></a>
+            <a href=""><img src="images/_bottom.jpg" alt="" class="object-cover rounded-full h-12 w-12"></a>
            <figcaption>Bottom</figcaption>
         </div>
         <div class="px-6">
-            <a href=""><img src="image/girls_bottom.jpg" alt="" class="object-cover rounded-full h-12 w-12"></a>
+            <a href=""><img src="images/girls_bottom.jpg" alt="" class="object-cover rounded-full h-12 w-12"></a>
            <figcaption>Bottom</figcaption>
         </div>
         <div class="px-6">
-            <a href=""><img src="image/_twin_sets.avif" alt="" class="object-cover rounded-full h-12 w-12"></a>
+            <a href=""><img src="images/_twin_sets.avif" alt="" class="object-cover rounded-full h-12 w-12"></a>
            <figcaption>Twin set</figcaption>
         </div>
     </section>
