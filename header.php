@@ -38,7 +38,7 @@
                     </button>
                 </div>
                 <div class="h-10 w-10 flex mx-5">
-                    <img src="image/2.png" alt="" class="object-cover">
+                    <img src="images/2.png" alt="" class="object-cover">
                     <a href="sign.php" class="font-bold text-2xl pt-1">sign</a>
                    
                 </div>

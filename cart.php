@@ -12,6 +12,7 @@ include 'db.php';
 
 $username= $_SESSION['name'];
 $useremail=$_SESSION['email'];
+$total_item=0;
 
 $id_ = "SELECT id FROM users WHERE email = ?";
 $stmt = $conn->prepare($id_);
@@ -41,9 +42,10 @@ if($result1->num_rows>0)
         $pro_price=$row1['price'];
         $pro_det=$row1['product_detail'];
         $pro_cat=$row1['prod_cat'];
-        $total_price=$total_price+$pro_price;  
-        
-        echo "<div class= 'flex items-start w-4/5  m-4 border-2'>";
+        $total_price=$total_price+$pro_price;
+        $total_item=$total_item+1;  
+       
+        echo "<div class= 'flex items-start w-3/4  m-4 border-2'>";
         echo " <img src='" .$imagepath . "' alt='' class= 'h-48 w-48 object-fill ml-4 mt-4 mb-4 shadow-lg '/>";
         echo "<div class='mt-4 mx-8'>";
         echo " <p class='mt-4 font-serif text-2xl'>".$pro_det."</p>";
@@ -51,15 +53,34 @@ if($result1->num_rows>0)
         echo "<p class=' font-bold text-2xl font-serif '>price:- ".$pro_price."</p>";
         echo "<form action='rem_fro_cart.php' method='POST'>";
         echo "<input type='hidden' name='remove' value='$imagepath'>";
-        echo " <button class='mt-4 h-10 w-48 bg-yellow-400 rounded-lg text-black'>Remove from cart</button>";
-        echo " </form>";
+        echo "<button class='mt-4 h-10 w-48 bg-yellow-400 rounded-lg text-black'>Remove from cart</button>";
+        echo "</form>";
         echo "</div>";
         echo "</div>";
     }
-   // echo "$total_price";
    echo "<form action='order.php' method='POST'> ";
-   echo " <button class='mt-4 h-10 w-4/5 m-4 bg-yellow-400 rounded-lg text-black '>Placed Order</button>";
+   echo " <button class='mt-4 h-10 w-3/4 m-4 bg-yellow-400 rounded-lg text-black '>Placed Order</button>";
    echo " </form>";
+   
+   echo "<div class= ' h-80 w-80 shadow-lg rounded-lg mt-4 mb-4 mx-96  border-2'>";
+   echo " <p class='mt-4 font-serif text-xl px-4 text-zinc-600'>Price Detail</p>";
+   echo "<hr class='mt-2'>";
+   echo "<div class='flex flex-row justify-betweem px-4'>";
+   echo " <p class='mt-4 font-serif text-xl'>Price (". $total_item." items)</p>";
+   echo " <p class='font-serif text-xl mt-4 mx-12 text-green-500'>". $total_price."</p>";
+   echo "</div>";
+   echo "<div class='flex flex-row justify-betweem px-4'>";
+   echo " <p class='mt-4 font-serif text-xl'>Delivery Charge</p>";
+   echo " <p class='font-serif text-xl mt-4 mx-12 text-green-500'>40</p>";
+   echo "</div>";
+   echo "<hr class='mt-2'>";
+   echo "<div class='flex flex-row justify-betweem px-4'>";
+   echo " <p class='mt-4 font-serif text-xl'>Total Amount</p>";
+   echo " <p class='font-serif text-xl mt-4 mx-12 text-green-500'>". $total_price."</p>";
+   echo "</div>";
+   echo "<hr class='mt-2'>";
+   echo "</div>";
+
 }
 else {
     echo "<h1 class=' text-3xl font-bold text-center mt-48 font-serif'>Cart is Empty</h1>";

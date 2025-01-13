@@ -26,7 +26,7 @@ if($result->num_rows>0)
 }
 
 
-$sel= "SELECT * FROM order_history WHERE userid = ?";
+$sel= "SELECT * FROM order_history  WHERE userid = ? ORDER BY order_date DESC, order_time DESC";
 $stmt = $conn->prepare($sel);
 $stmt->bind_param("i", $userid);
 $stmt->execute();
@@ -45,18 +45,20 @@ if($result1->num_rows>0)
         $product=$row1['prod_det'];
         $pri=$row1['price'];
         $image=$row1['image_path'];
+        $date=$row1['order_date'];
         //$total_price=$total_price+$pro_price;  
         echo "<div class= 'flex items-start w-4/5  m-4 border-2'>";
         echo " <img src='" .$image . "' alt=''  class= 'h-48 w-48 object-fill ml-4 mt-4 mb-4 shadow-lg '/>";
         echo "<div class='mt-4 mx-8'>";
         echo " <p class='mt-4 font-serif text-2xl'>".$product."</p>";
-        echo " <p class= 'text-2xl font-serif'>".$pri."</p>"; 
+        echo " <p class= 'text-2xl font-serif'>price:-".$pri."</p>"; 
         echo "<p class=' font-bold text-2xl font-serif '>Delivery Detail</p>";
-        echo " <p class= 'text-2xl font-serif'> Name:-".$name."</p>";
-        echo " <p class= 'text-2xl font-serif'>contact:-".$contact."</p>";
-        echo " <p class= 'text-2xl font-serif'>pincode:-".$pin."</p>";
-        echo " <p class= 'text-2xl font-serif'>Address:-".$add."</p>";
-        echo " <p class= 'text-2xl font-serif'> District".$dis."</p>";
+        echo " <p class= 'text-xl font-serif'>".$name."</p>";
+        echo " <p class= 'text-xl font-serif'>".$add.", ".$dis." ,".$pin."  </p>";
+        // echo " <p class= 'text-xl font-serif'> District:-".$dis."</p>";
+        // echo " <p class= 'text-xl font-serif'>pincode:-".$pin."</p>";
+        echo " <p class= 'text-xl font-serif'> order date:-".$date."</p>";
+        echo " <p class= 'text-xl font-serif'>contact:-".$contact."</p>";
         echo "</div>";
         echo "</div>";
     }

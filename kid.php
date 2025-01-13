@@ -16,7 +16,7 @@
     ?>
     <main>
     <div class="mt-3">
-    <a href="women.php" class="hover:underline font-serif ml-28">WOMEN</a>
+            <a href="women.php" class="hover:underline font-serif ml-28">WOMEN</a>
             <a href="men.php" class="hover:underline px-10 font-serif">MEN</a>
             <a href="kid.php" class="hover:underline  font-serif">KID</a>
     </div>

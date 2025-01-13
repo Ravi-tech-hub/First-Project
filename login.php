@@ -8,7 +8,7 @@
 </head>
 <body>
 <div class="flex flex-row justify-center mt-8">
-    <img src="title.jpg" alt="LOGO" class="h-10 w-20  object-cover">
+    <img src="images/title.jpg" alt="LOGO" class="h-10 w-20  object-cover">
    <h2 class="text-center font-bold text-3xl ">LuxorAura.in</h2>
 </div>
     <section class="flex flex-row justify-center p-6">
@@ -25,7 +25,7 @@
 
         <button class="bg-yellow-400 h-10 w-72 mx-3 rounded-full">Login</button>
         <p class="text-center pt-2">Do not  have account?
-            <a href="login.html" class="font-bold">signup</a>
+            <a href="sign.php" class="font-bold">signup</a>
         </p>
     </form>
 

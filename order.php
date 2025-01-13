@@ -18,8 +18,9 @@
         focus:outline-blue-400">
 
         <label for="number"> </label>
-        <input type="tel" name="number" placeholder="10 digit mobile number" required pattern="[0-9]{10}" class="bg-white font-normal m-4 p-4 rounded-lg border-2 h-10 w-96
+        <input type="text" name="number" placeholder="10 digit mobile number" pattern="[0-9]{10}"  required class="bg-white font-normal m-4 p-4 rounded-lg border-2 h-10 w-96
             focus:outline-blue-400">
+        
 
         <label for="pincode">
             <input type="text" name="pincode" placeholder="pincode" required class="bg-white font-normal m-4 p-4 rounded-lg border-2 h-10 w-96

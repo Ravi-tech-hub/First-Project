@@ -9,8 +9,14 @@
 <body>
     <h1 class="font-bold text-center text-3xl mt-4 font-serif">Add Sub category</h1>
     <form action="sub_cat_backend.php" method="POST" enctype="multipart/form-data">
-        <input type="text" name="cat" placeholder="Enter category men, women or kid"
-         class="h-10 w-96 border-2 rounded-lg  m-8 p-4">
+        <select name="cat" class="h-20 w-96 border-2 rounded-lg  m-8 p-4">
+            <option value="">select category</option>
+            <option value="women">women</option>
+            <option value="men">men</option>
+            <option value="kid">kid</option>
+        </select>
+        <!-- <input type="text" name="cat" placeholder="Enter category men, women or kid"
+         class="h-10 w-96 border-2 rounded-lg  m-8 p-4"> -->
 
         <input type="text" name="sub_cat" placeholder="Enter sub-category"
             class="h-10 w-96 border-2 rounded-lg  m-8 p-4">

@@ -24,31 +24,33 @@ if($result->num_rows>0)
     //echo "$userid";
 }
 
-$cart=" SELECT * FROM add_to_cart WHERE user_id=?";
-$st=$conn->prepare($cart);
-$st->bind_param("i", $userid);
+$sel= "SELECT * FROM add_to_cart WHERE user_id = ?";
+$st = $conn->prepare($sel);
+$st->bind_param("s", $userid);
 $st->execute();
-$result1=$st->get_result();
+$result1 = $st->get_result();
 
 if($result1->num_rows>0)
 {
-    while($row1=$result1->fetch_assoc());
+    while($row1=$result1->fetch_assoc())
    {    
-        $pri=$row1['price'];
-        $prod=$row1['product_detail'];
-        $image=$row1['image'];
-       
+        $pric=$row1['price'];
+        $det=$row1['product_detail'];
+        $imagepath=$row1['image'];
+        $eventdate=date('Y-m-d');
+        $oder_date=date('H:i:s');
 
-        $sql = "INSERT INTO order_history (userid,name,mobile,pincode,address,district,prod_det,price,image_path) 
-        VALUES ('$userid','$user_name','$mobile','$pin','$add','$dis',' $prod','$pri','$image')";
-   }
+        $sql = "INSERT INTO order_history (userid,name,mobile,pincode,address,district,prod_det,price,image_path,order_date,order_time) 
+        VALUES ('$userid','$user_name','$mobile','$pin','$add','$dis',' $det','$pric','$imagepath',' $eventdate','$oder_date')";
+        $result=$conn->query($sql);
+    }
+    if ($result === TRUE) {
+        echo "<script>alert('Add successful!'); window.location.href='orderhistory_backend.php'</script>";
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+
 }
-
-// if ($conn->query($sql) === TRUE) {
-//     echo "<script>alert('order successful!'); window.location.href='index.php'</script>";
-// } else {
-//     echo "Error: " . $sql . "<br>" . $conn->error;
-// }
 
 $conn->close();
 ?>

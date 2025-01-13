@@ -55,7 +55,7 @@ if($_SERVER['REQUEST_METHOD']=='POST')
     }
     else
     {
-        echo "No data is availabe";
+        echo "No Product is availabe";
     }
 }
 ?> 

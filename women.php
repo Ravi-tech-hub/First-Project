@@ -14,6 +14,7 @@
 
     <?php
         include 'header.php';
+        
     ?>
     <main>
         <div class="mt-3">
@@ -65,6 +66,10 @@
         <section>
             <?php
                 include 'db.php';
+                if (session_status() === PHP_SESSION_NONE)
+                {
+                    session_start();
+                }
                 $procat='women';
                 $cate="SELECT * FROM sub_cat WHERE category=?";
                 $stmt=$conn->prepare($cate);
@@ -91,7 +96,7 @@
                         echo "</form>";
                        // echo "<img src='images/".$imagepath."' alt='' class='h-80 w-full'>";
                         echo "<div class='flex flex-row p-3'>";
-                        echo "<img src='image/image20.avif' alt='' class=' h-6 w-6 rounded-full'>";
+                        echo "<img src='images/image20.avif' alt='' class=' h-6 w-6 rounded-full'>";
                         echo "<p class='px-2 font-semibold font-serif'>By Trend Expert</p>";
                         echo "</div>";
                         echo "</div>";

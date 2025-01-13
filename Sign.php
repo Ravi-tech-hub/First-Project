@@ -8,11 +8,11 @@
 </head>
 <body>
 <div class="flex flex-row justify-center mt-8">
-    <img src="title.jpg" alt="LOGO" class="h-10 w-20  object-cover">
+    <img src="images/title.jpg" alt="LOGO" class="h-10 w-20  object-cover">
    <h2 class="text-center font-bold text-3xl ">LuxorAura.in</h2>
 </div>
     <section class="flex flex-row justify-center p-6">
-    <form action="sign_backend.php" method="POST" class="h-80 w-80 bg-white shadow-lg rounded-lg border-2 border-b-zinc-100">
+    <form action="sign_backend.php" method="POST" class="h-96 w-80 bg-white shadow-lg rounded-lg border-2 border-b-zinc-100">
         <h2 class="text-black font-serif text-2xl text-center p-4">Sign In</h2>
         <label for="user_name"> </label>
             <input type="text" name="user_name" placeholder="Enter your name" required 

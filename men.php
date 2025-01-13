@@ -16,7 +16,7 @@
     ?>
     <main>
         <div class="mt-3">
-        <a href="women.php" class="hover:underline font-serif ml-28">WOMEN</a>
+            <a href="women.php" class="hover:underline font-serif ml-28">WOMEN</a>
             <a href="men.php" class="hover:underline px-10 font-serif">MEN</a>
             <a href="kid.php" class="hover:underline  font-serif">KID</a>
         </div>
@@ -65,9 +65,9 @@
                 $stmt->bind_param("s",$procat);
                 $stmt->execute();
                 $result=$stmt->get_result();
-
+                echo "<div class='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-10 px-4'>";
                 if($result->num_rows>0)
-                {   echo "<div class='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-10 px-4'>";
+                {   
                     while($row=$result->fetch_assoc())
                     {
                         $imagepath=$row['image'];
@@ -92,10 +92,10 @@
                         echo "</div>";
                       
                     }
-                    echo "</div>";
+                   
                         
                 }
-            
+                echo "</div>";
             ?>
         </section>
         </main>
