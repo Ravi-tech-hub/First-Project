@@ -15,8 +15,6 @@
             <option value="men">men</option>
             <option value="kid">kid</option>
         </select>
-        <!-- <input type="text" name="cat" placeholder="Enter category men, women or kid"
-         class="h-10 w-96 border-2 rounded-lg  m-8 p-4"> -->
 
         <input type="text" name="sub_cat" placeholder="Enter sub-category"
             class="h-10 w-96 border-2 rounded-lg  m-8 p-4">
