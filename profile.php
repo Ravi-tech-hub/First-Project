@@ -7,6 +7,7 @@
 </head>
 <body>
     <a href="logout.php">Logout</a>
+    <br>
     <a href="orderhistory_backend.php">Your Order</a>
 </body>
 </html>

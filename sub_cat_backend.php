@@ -15,7 +15,7 @@
         {
             if(move_uploaded_file($tempname,$folder))
             {
-                echo "Image uploaded successfully";
+                echo "<script>alert('sub category added successfully'); window.location.href='". $procat.".php'</script>";
             }
             else
             {
