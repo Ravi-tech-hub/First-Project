@@ -16,9 +16,9 @@
     ?>
     <main>
     <div class="mt-3">
-            <a href="women.php" class="hover:underline font-serif ml-28">WOMEN</a>
-            <a href="men.php" class="hover:underline px-10 font-serif">MEN</a>
-            <a href="kid.php" class="hover:underline  font-serif">KID</a>
+        <a href="adm_pan_women.php" class="hover:underline font-serif ml-28">WOMEN</a>
+            <a href="adm_pan_men.php" class="hover:underline px-10 font-serif">MEN</a>
+            <a href="adm_pan_kid.php" class="hover:underline  font-serif">KID</a>
     </div>
 
     <section class="flex flex-wrap  justify-center mt-5">
@@ -86,6 +86,16 @@
                         echo " <input type='hidden' name='pro_sub' value='".$prosubcat."'>";
                         echo "<button ><img src='images/".$imagepath."' alt='' class='h-80 w-96 object-full'></button>";
                         echo "</form>";
+                        echo "<div class='flex flex-row justify-between mx-2'>";
+                        echo "<form action='del_sub.php' method='POST'>";
+                        echo " <input type='hidden' name='image' value='".$imagepath."'>";
+                        echo " <button class='bg-yellow-500 text-white px-3 py-1 rounded hover:bg-orange-600'>Delete</button>";
+                        echo " </form>";
+                        echo "<form action='sub_upd.php' method='POST'>";
+                        echo " <input type='hidden' name='image' value='".$imagepath."'>";
+                        echo "<button class='bg-orange-500 text-white px-3 py-1 rounded hover:bg-orange-600'>Update</button>";
+                        echo "</form>";
+                        echo "</div>";
                        // echo "<img src='images/".$imagepath."' alt='' class='h-80 w-full'>";
                         echo "<div class='flex flex-row p-3'>";
                         echo "<img src='images/image20.avif' alt='' class=' h-6 w-6 rounded-full'>";

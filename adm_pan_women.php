@@ -1,30 +1,23 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luxor Aura</title>
-    <link rel="icon" href="title.jpg">
+    <title>Admim</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-
 <body class="bg-zinc-200">
-
     <?php
-        include 'header.php';
-        
+        include 'adm_head.php';
     ?>
     <main>
         <div class="mt-3">
         <div class="mt-3">
-            <a href="women.php" class="hover:underline font-serif ml-28">WOMEN</a>
-            <a href="men.php" class="hover:underline px-10 font-serif">MEN</a>
-            <a href="kid.php" class="hover:underline  font-serif">KID</a>
+            <a href="adm_pan_women.php" class="hover:underline font-serif ml-28">WOMEN</a>
+            <a href="adm_pan_men.php" class="hover:underline px-10 font-serif">MEN</a>
+            <a href="adm_pan_kid.php" class="hover:underline  font-serif">KID</a>
         </div>
         </div>
-
         <section class="flex flex-wrap  justify-center mt-5">
             <div class="px-6">
                 <a href=""><img src="images/winter.jpg" alt="" class="object-cover rounded-full h-12 w-12"></a>
@@ -63,6 +56,7 @@
                 <figcaption>Lehenga</figcaption>
             </div>
         </section>
+
         <section>
             <?php
                 include 'db.php';
@@ -86,26 +80,32 @@
                         echo " <div class='bg-white shadow-lg rounded-lg '>";
                         echo "<p class='font-serif p-4'>".$prosubcat."<p>";
                         echo "<div>";
-                        echo "<form action='pro.php' method='POST'>";
+                        echo "<form action='adm_pro.php' method='POST'>";
                         echo " <input type='hidden' name='pro_sub' value='".$prosubcat."'>";
                         echo "<button ><img src='images/".$imagepath."' alt='' class='h-80 w-96 object-full'></button>";
                         echo "</form>";
-                       // echo "<img src='images/".$imagepath."' alt='' class='h-80 w-full'>";
+                        echo "<div class='flex flex-row justify-between mx-2'>";
+                        echo "<form action='del_sub.php' method='POST'>";
+                        echo " <input type='hidden' name='image' value='".$imagepath."'>";
+                        echo " <button class='bg-yellow-500 text-white px-3 py-1 rounded hover:bg-orange-600'>Delete</button>";
+                        echo " </form>";
+                        echo "<form action='sub_upd.php' method='POST'>";
+                        echo " <input type='hidden' name='image' value='".$imagepath."'>";
+                        echo "<button class='bg-orange-500 text-white px-3 py-1 rounded hover:bg-orange-600'>Update</button>";
+                        echo "</form>";
+                        echo "</div>";
+                       //echo "<img src='images/".$imagepath."' alt='' class='h-80 w-full'>";
                         echo "<div class='flex flex-row p-3'>";
                         echo "<img src='images/image20.avif' alt='' class=' h-6 w-6 rounded-full'>";
                         echo "<p class='px-2 font-semibold font-serif'>By Trend Expert</p>";
                         echo "</div>";
                         echo "</div>";
                         echo "</div>";
-                      
                     }
-                    echo "</div>";
-                        
+                    echo "</div>";       
                 }
-            
             ?>
         </section>
         </main>
 </body>
-
 </html>

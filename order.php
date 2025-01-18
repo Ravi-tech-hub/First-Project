@@ -18,7 +18,7 @@
         focus:outline-blue-400">
 
         <label for="number"> </label>
-        <input type="text" name="number" placeholder="10 digit mobile number"   required class="bg-white font-normal m-4 p-4 rounded-lg border-2 h-10 w-96
+        <input type="text" name="number_" placeholder="10 digit mobile number" required class="bg-white font-normal m-4 p-4 rounded-lg border-2 h-10 w-96
             focus:outline-blue-400">
         
 

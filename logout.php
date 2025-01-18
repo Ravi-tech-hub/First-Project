@@ -2,6 +2,6 @@
 include 'db.php';
 session_unset();
 session_destroy();
-header('Location:index.php');
+header('Location:women.php');
 exit();
 ?>

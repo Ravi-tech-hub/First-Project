@@ -58,9 +58,6 @@ if($result1->num_rows>0)
         echo "</div>";
         echo "</div>";
     }
-   echo "<form action='order.php' method='POST'> ";
-   echo " <button class='mt-4 h-10 w-3/4 m-4 bg-yellow-400 rounded-lg text-black '>Placed Order</button>";
-   echo " </form>";
    
    echo "<div class= ' h-80 w-80 shadow-lg rounded-lg mt-4 mb-4 mx-96  border-2'>";
    echo " <p class='mt-4 font-serif text-xl px-4 text-zinc-600'>Price Detail</p>";
@@ -73,13 +70,18 @@ if($result1->num_rows>0)
    echo " <p class='mt-4 font-serif text-xl'>Delivery Charge</p>";
    echo " <p class='font-serif text-xl mt-4 mx-12 text-green-500'>40</p>";
    echo "</div>";
+   $final_price=$total_price+40;
    echo "<hr class='mt-2'>";
    echo "<div class='flex flex-row justify-betweem px-4'>";
    echo " <p class='mt-4 font-serif text-xl'>Total Amount</p>";
-   echo " <p class='font-serif text-xl mt-4 mx-12 text-green-500'>". $total_price."</p>";
+   echo " <p class='font-serif text-xl mt-4 mx-12 text-green-500'>".$final_price."</p>";
    echo "</div>";
    echo "<hr class='mt-2'>";
+
    echo "</div>";
+   echo "<form action='order.php' method='POST'> ";
+   echo " <button class='mt-4 h-10 w-3/4 m-4 bg-yellow-400 rounded-lg text-black '>Placed Order</button>";
+   echo " </form>";
 
 }
 else {

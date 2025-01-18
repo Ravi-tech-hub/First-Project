@@ -19,7 +19,7 @@
         {
             if(move_uploaded_file($tempname,$folder))
             {
-                echo "<script>alert('sub category added successfully'); window.location.href='". $procat.".php'</script>";
+                echo "<script>alert('sub category added successfully'); window.location.href='adm_pan.php'</script>";
             }
             else
             {

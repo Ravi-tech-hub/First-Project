@@ -5,10 +5,11 @@ $username= $_SESSION['name'];
 $useremail=$_SESSION['email'];
 
 $user_name=$_POST['name_'];
-$mobile=$_POST['number'];
+$mobile=$_POST['number_'];
 $pin=$_POST['pincode'];
 $add=$_POST['address'];
 $dis=$_POST['city'];
+echo "$mobile"; 
 
 $id_ = "SELECT id FROM users WHERE email = ?";
 $stmt = $conn->prepare($id_);
@@ -45,7 +46,7 @@ if($result1->num_rows>0)
         $result=$conn->query($sql);
     }
     if ($result === TRUE) {
-        echo "<script>alert('Add successful!'); window.location.href='orderhistory_backend.php'</script>";
+        echo "<script>alert('order successful!'); window.location.href='orderhistory_backend.php'</script>";
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }

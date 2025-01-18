@@ -20,7 +20,7 @@
             class="  px-4 my-2 mx-3 rounded-lg bg-white h-10 w-72 border-2 border-black placeholder-black font-normal">
         
         <label for="user_password"></label>
-            <input type="text" name="user_password" placeholder="Enter your password" required 
+            <input type="password" name="user_password" placeholder="Enter your password" required 
             class=" px-4 my-2 mx-3  rounded-lg bg-white h-10 w-72 border-2 border-black placeholder-black font-normal">
 
         <button class="bg-yellow-400 h-10 w-72 mx-3 rounded-full">Login</button>

@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         
         if ($password==$pass) {
 
-            echo "<script>alert('Login successful!'); window.location.href='adm_pan.php'</script>";
+            echo "<script>alert('Login successful!'); window.location.href='adm_pan_women.php'</script>";
             exit();
         } else {
             $error = "Invalid password.";
