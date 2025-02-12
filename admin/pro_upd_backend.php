@@ -6,7 +6,7 @@ if($_SERVER['REQUEST_METHOD']=='POST')
     $det=$_POST['detail'];
     $subcat=$_POST['pro_sub'];
     $img=$_POST['old_img'];
-    echo "$img";
+    //echo "$img";
     // $cat=$_POST['categ'];
     // echo "$cat";
 

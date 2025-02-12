@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,7 +28,7 @@ if($result->num_rows>0)
 }
 
 
-$imag= "SELECT * FROM add_to_cart WHERE user_id = ?";
+$imag= "SELECT * FROM add_to_cart WHERE user_id = ? ORDER BY add_time DESC";
 $stmt = $conn->prepare($imag);
 $stmt->bind_param("s", $userid);
 $stmt->execute();
@@ -39,7 +40,7 @@ if($result1->num_rows>0)
     while($row1=$result1->fetch_assoc())
     { 
         $imagepath=$row1['image'];
-        $pro_price=$row1['price'];
+        $pro_price=intval($row1['price']);
         $pro_det=$row1['product_detail'];
         $pro_cat=$row1['prod_cat'];
         $total_price=$total_price+$pro_price;

@@ -15,7 +15,7 @@
     <?php if (!isset($_SESSION['id'])): ?>
         <nav>
             <div
-                class="h-16 bg-white shadow-lg text-black  font-serif font-bold text-3xl py-3 flex flex-row  justify-evenly">
+                class="h-16 bg-white shadow-lg text-black  font-serif font-bold text-3xl py-3 flex justify-between">
                 <div class="flex">
                     <img src="../images/title.jpg" alt="Logo" class=" h-10 w-20 object-cover">
                     LuxorAura

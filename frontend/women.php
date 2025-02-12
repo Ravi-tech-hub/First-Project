@@ -86,7 +86,7 @@
                         echo " <div class='bg-white shadow-lg rounded-lg '>";
                         echo "<p class='font-serif p-4'>".$prosubcat."<p>";
                         echo "<div>";
-                        echo "<form action='pro.php' method='POST'>";
+                        echo "<form action='pro.php' method='GET'>";
                         echo " <input type='hidden' name='pro_sub' value='".$prosubcat."'>";
                         echo "<button ><img src='../images/".$imagepath."' alt='' class='h-80 w-96 object-full'></button>";
                         echo "</form>";

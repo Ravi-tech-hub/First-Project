@@ -46,10 +46,10 @@ else
             $det=$row1['product_detail'];
             $imagepath=$row1['image'];
             $eventdate=date('Y-m-d');
-            $oder_date=date('H:i:s');
+            $oder_time=date('H:i:s');
     
             $sql = "INSERT INTO order_history (userid,name,mobile,pincode,address,district,prod_det,price,image_path,order_date,order_time) 
-            VALUES ('$userid','$user_name','$mobile','$pin','$add','$dis',' $det','$pric','$imagepath',' $eventdate','$oder_date')";
+            VALUES ('$userid','$user_name','$mobile','$pin','$add','$dis',' $det','$pric','$imagepath',' $eventdate','$oder_time')";
             $result=$conn->query($sql);
         }
         if ($result === TRUE) {

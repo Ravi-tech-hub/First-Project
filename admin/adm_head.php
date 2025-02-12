@@ -21,6 +21,7 @@
                 <a href="../frontend/product.php" class="font-bold text-2xl pt-1 mx-6">
                     Add Product
                 </a>
+                <a href="../backend/logout.php" class="font-bold text-2xl pt-1 mx-6">Logout </a>
             </div>
 
         </div>
