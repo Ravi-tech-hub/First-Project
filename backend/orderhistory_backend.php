@@ -8,6 +8,7 @@
 </head>
 <body>
 <?php
+include '../frontend/header.php';
 include 'db.php';
 
 $username= $_SESSION['name'];
@@ -58,7 +59,6 @@ if($result1->num_rows>0)
         // echo " <p class= 'text-xl font-serif'> District:-".$dis."</p>";
         // echo " <p class= 'text-xl font-serif'>pincode:-".$pin."</p>";
         echo " <p class= 'text-xl font-serif'> order date:-".$date."</p>";
-        echo " <p class= 'text-xl font-serif'>contact:-".$contact."</p>";
         echo "</div>";
         echo "</div>";
     }

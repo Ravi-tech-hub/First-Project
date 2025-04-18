@@ -1,9 +1,9 @@
 <?php
 include '../backend/db.php';
 
-if (!isset($_SESSION['name'])) {
-    echo "<script>alert('Login first'); window.location.href='login.php'</script>";
-}
+// if (!isset($_SESSION['name'])) {
+//     echo "<script>alert('Login first'); window.location.href='login.php'</script>";
+// }
 
 $prodcat = $_POST['pro_cat'];
 $pric = $_POST['price'];

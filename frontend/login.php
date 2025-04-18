@@ -16,7 +16,7 @@
         <h2 class="text-black font-serif text-2xl text-center p-4">Login</h2>
 
         <label for="user_email"></label>
-            <input type="text" name="user_email" placeholder="Enter your email" required 
+            <input type="email" name="user_email" placeholder="Enter your email" required 
             class="  px-4 my-2 mx-3 rounded-lg bg-white h-10 w-72 border-2 border-black placeholder-black font-normal">
         
         <label for="user_password"></label>

@@ -15,76 +15,60 @@
     <?php if (!isset($_SESSION['id'])): ?>
         <nav>
             <div
-                class="h-16 bg-white shadow-lg text-black  font-serif font-bold text-3xl py-3 flex justify-between">
+                class="h-16 bg-white shadow-lg text-black  font-serif font-bold text-3xl py-3 flex  justify-between">
                 <div class="flex">
-                    <img src="../images/title.jpg" alt="Logo" class=" h-10 w-20 object-cover">
+                    <img src="../images/title.jpg" alt="Logo" class=" h-8 w-16 object-cover">
                     LuxorAura
+                    <div class="flex flex-wrap">
+                    <a href="women.php" class="font-bold text-2xl pt-1 ml-4"> Women</a>
+                    <a href="men.php" class="font-bold text-2xl pt-1 mx-3"> Men</a>
+                    <a href="kid.php" class="font-bold text-2xl pt-1 mx-3"> Kid</a>
+                    </div>
+                    
                 </div>
 
-                <div class="font-bold text-2xl pt-1">
-                    Women
-                </div>
-                <div class="font-bold text-2xl pt-1">
-                    Men
-                </div>
-                <div class="font-bold text-2xl pt-1">
-                    Kids
-                </div>
                 <div>
-                    <button class="flex flex-row">
-                        <img src="../images/search.png" alt="" class="bg-slate-100 h-10 w-10 object-cover rounded-l-md">
-                        <input type="text" placeholder="  Search for Product,Brand and More "
-                            class="text-lg text-black bg-slate-100  w-96 h-10 rounded-r-md font-normal outline-none">
-                    </button>
+                    
                 </div>
-                <div class="h-10 w-10 flex mx-5">
-                    <img src="../images/2.png" alt="" class="object-cover">
-                    <a href="sign.php" class="font-bold text-2xl pt-1">sign</a>
+                <div class="flex flex-wrap">
+                    <!-- <img src="../images/2.png" alt="" class="object-cover h-10 w-10"> -->
+                    <a href="women.php" class="font-bold text-2xl pt-1 mx-3">Home</a>
+                    <a href="sign.php" class="font-bold text-2xl pt-1 mx-3">Signup</a>
+                    <a href="cart.php" class="font-bold text-2xl pt-1 mx-3">
+                        Cart
+                    </a>
                    
-                </div>
-                <div class="h-10 w-10 mx-12 flex ">
-                    <img src="../images/3.png" alt="" class="object-cover">
-                    <a href="login.php" class="font-bold text-2xl pt-1">
-                        cart
-                    </a>    
                 </div>
             </div>
         </nav>
         <?php else: ?>
             <nav>
             <div
-                class="h-16 bg-white shadow-lg text-black  font-serif font-bold text-3xl py-3 flex flex-row  justify-around">
+                class="h-16 bg-white shadow-lg text-black  font-serif font-bold text-3xl py-3 flex flex-wrap justify-between">
                 <div class="flex">
-                    <img src="../images/title.jpg" alt="Logo" class=" h-10 w-20 object-cover">
+                    <img src="../images/title.jpg" alt="Logo" class=" h-8 w-16 object-cover">
                     LuxorAura
+                    <a href="women.php" class="font-bold text-2xl pt-1 ml-6"> Women</a>
+                    <a href="men.php" class="font-bold text-2xl pt-1 mx-3"> Men</a>
+                    <a href="kid.php" class="font-bold text-2xl pt-1 mx-3"> Kid</a>
+                    
                 </div>
 
-                <div class="font-bold text-2xl pt-1">
-                    Women
-                </div>
-                <div class="font-bold text-2xl pt-1">
-                    Men
-                </div>
-                <div class="font-bold text-2xl pt-1">
-                    Kids
-                </div>
                 <div>
-                    <button class="flex flex-row">
-                        <img src="../images/search.png" alt="" class="bg-slate-100 h-10 w-10 object-cover rounded-l-md">
-                        <input type="text" placeholder="  Search for Product,Brand and More "
-                            class="text-lg text-black bg-slate-100  w-96 h-10 rounded-r-md font-normal outline-none">
-                    </button>
+                    
                 </div>
-                <div class="h-10 w-10 flex mx-5">
-                    <img src="../images/2.png" alt="" class="object-cover">
-                    <a href="profile.php" class="font-bold text-2xl pt-1">Profile</a>
+                <div class="flex">
+                    <!-- <img src="../images/2.png" alt="" class="object-cover h-10 w-10"> -->
+                    <a href="women.php" class="font-bold text-2xl pt-1 mx-3">Home</a>
+                    <a href="cart.php" class="font-bold text-2xl pt-1 mx-3">
+                        Cart
+                    </a> 
+                    <a href="../backend/orderhistory_backend.php" class="font-bold text-2xl pt-1 mx-3">
+                        Order
+                    </a>
+
+                    <a href="../backend/logout.php" class="font-bold text-2xl pt-1 mx-3">Logout</a>
                    
-                </div>
-                <div class="h-10 w-10 mx-12 flex ">
-                    <img src="../images/3.png" alt="" class="object-cover">
-                    <a href="cart.php" class="font-bold text-2xl pt-1">
-                        cart
-                    </a>    
                 </div>
             </div>
         </nav>
