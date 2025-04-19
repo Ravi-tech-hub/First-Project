@@ -35,7 +35,8 @@ $result1 = $stmt->get_result();
 
 if($result1->num_rows>0)
 {   $total_price=0;
-    echo "<h1 class='text-center mt-5 font-bold text-3xl font-serif'>Your Order</h1>";
+    echo "<h1 class='text-center mt-10 font-bold text-4xl text-blue-600 font-serif'>Your Order</h1>";
+    echo "<div class='bg-white shadow-lg'>";
     while($row1=$result1->fetch_assoc())
     {   
         $name=$row1['name'];
@@ -48,24 +49,32 @@ if($result1->num_rows>0)
         $image=$row1['image_path'];
         $date=$row1['order_date'];
         //$total_price=$total_price+$pro_price;  
-        echo "<div class= 'flex items-start w-4/5  m-4 border-2'>";
-        echo " <img src='../" .$image . "' alt=''  class= 'h-48 w-48 object-fill ml-4 mt-4 mb-4 shadow-lg '/>";
-        echo "<div class='mt-4 mx-8'>";
-        echo " <p class='mt-4 font-serif text-2xl'>".$product."</p>";
-        echo " <p class= 'text-2xl font-serif'>price:-".$pri."</p>"; 
-        echo "<p class=' font-bold text-2xl font-serif '>Delivery Detail</p>";
-        echo " <p class= 'text-xl font-serif'>".$name."</p>";
-        echo " <p class= 'text-xl font-serif'>".$add.", ".$dis." ,".$pin."  </p>";
+        
+        echo "<div class= 'max-w-5xl mx-auto my-6 bg-white shadow-lg rounded-lg flex flex-col overflow-hidden md:flex-row'>";
+
+        echo "<div class='flex-shrink-0'>";
+        echo " <img src='../" .$image . "' alt=''  class= 'h-48 w-48 object-fill m-4 shadow-lg '/>";
+        echo "</div>";
+
+        echo "<div class='flex flex-col justify-between p-6 w-full'>";
+        echo "<div>";
+        echo " <p class='font-bold font-serif text-2xl text-gray-800 '>".$product."</p>";
+        echo " <p class= ' font-medium  mt-2 text-2xl font-serif'>price:-".$pri."</p>"; 
+        echo "<p class=' font-semibold  tetx-gray-600 text-2xl font-serif  mt-2'>Delivery Detail</p>";
+        echo " <p class= 'text-xl text-gary-700 font-serif'>".$name."</p>";
+        echo " <p class= 'text-xl text-gary-700 font-serif'>".$add.", ".$dis." ,".$pin."  </p>";
         // echo " <p class= 'text-xl font-serif'> District:-".$dis."</p>";
         // echo " <p class= 'text-xl font-serif'>pincode:-".$pin."</p>";
-        echo " <p class= 'text-xl font-serif'> order date:-".$date."</p>";
+        echo " <p class= 'text-xl  text-gray-600 mt-2 font-serif'> order date:-".$date."</p>";
+        echo "</div>";
+
         echo "</div>";
         echo "</div>";
     }
     //echo "$total_price";
 }
 else {
-    echo "<h1 class=' text-3xl font-bold text-center mt-48 font-serif'>No order!</h1>";
+    echo "<h1 class=' text-3xl font-bold text-center mt-48 font-serif text-gray-500'>No order!</h1>";
 }
 $conn->close();
 ?>  

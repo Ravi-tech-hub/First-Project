@@ -55,7 +55,7 @@ if($result1->num_rows>0)
         $total_item=$total_item+1; 
 
         echo "<div class= 'flex items-start p-4  m-4 border-2 rounded-lg shadow-sm '>";
-        echo " <img src='../" .$imagepath . "' alt='' class= 'h-48 w-48 object-cover rounded-md '/>";
+        echo " <img src='../" .$imagepath . "' alt='' class= 'h-48 w-48 object-fill rounded-md '/>";
         echo "<div class='ml-6'>";
         echo " <p class='mb-2 font-serif text-2xl'>".$pro_det."</p>";
         echo " <p class= ' mb-2 text-2xl font-serif'>category:-".$pro_cat."</p>"; 

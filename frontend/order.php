@@ -9,90 +9,110 @@
 </head>
 
 <body>
-<?php
+    <?php
+include 'header.php';
 include '../backend/db.php';
 
 if (!isset($_SESSION['name'])) {
     echo "<script>alert('Login first'); window.location.href='login.php'</script>";
 }
 ?>
-    <h1 class="font-bold text-3xl font-serif text-center mt-6 text-blue-500">Delivery Detail</h1>
-    <form action="orderhistory.php"  method="POST" class="mx-28">
+    <div class="max-w-4xl mx-auto px-4 py-10">
+        <h1 class="font-semibold text-4xl mb-10 font-serif text-center  text-blue-600">Delivery Detail</h1>
+        <form action="orderhistory.php" method="POST"
+            class="bg-white shadow-lg rounded-lg grid  grid-cols-1 md:grid-cols-2 gap-6 p-8">
+            <div class="flex flex-col">
+                <label for="name_" class="text-sm font-medium mb-1">Full Name <span class="text-red-500">*</span></label>
+                <input type="text" name="name_" minlength="4" placeholder="Ravi Prakash"
+                    class="bg-gray-100 p-3 rounded-md border border-gray-300 focus:outline-blue-400">
+            </div>
+
+            <div class="flex flex-col">
+                <label for="number_" class="text-sm font-medium mb-1">Mobile Number <span
+                        class="text-red-500">*</span></label>
+                <input type="number" name="number_" placeholder="10 digit mobile number" pattern="[0-9]{10}" required
+                    class="bg-gray-100 p-3 rounded-md border border-gray-300 focus:outline-blue-400">
+            </div>
 
 
-        <label for="name_"></label>
-        <input type="text" name="name_" minlength="4" placeholder="Full name(Required)" class="bg-white tetx-black font-normal   rounded-lg m-4 p-4 border-2 h-10  w-96 
-        focus:outline-blue-400">
-
-        <label for="number"> </label>
-        <input type="number" name="number_" placeholder="10 digit mobile number" pattern="[0-9]{10}"  required class="bg-white font-normal m-4 p-4 rounded-lg border-2 h-10 w-96
-            focus:outline-blue-400">
-        
-
-        <label for="pincode">
-            <input type="number" name="pincode" placeholder="pincode"  pattern="[0-9]{6}"  required class="bg-white font-normal m-4 p-4 rounded-lg border-2 h-10 w-96
-            focus:outline-blue-400">
-        </label>
-
-        <label for="Locality">
-            <input type="text" name="locality" minlength="4" placeholder="Locality" required class="bg-white font-normal m-4 p-4 rounded-lg border-2 h-10 w-96
-            focus:outline-blue-400">
-        </label>
-        <label for="address">
-            <input type="text" name="address"  minlength="4" placeholder="address"  required class="bg-white font-normal m-4 p-4 rounded-lg h-28 w-96 border-2
-            focus:outline-blue-400 ">
-        </label>
-
-        <label for="city">
-            <input type="text" name="city" minlength="4" placeholder="city/district/town" required class="bg-white font-normal m-4 p-4 rounded-lg h-10 w-96 border-2
-            focus:outline-blue-400 ">
-        </label>
-
-        <label for="state" class="bg-white text-black font-normal">
-            <select name="state" id="state" class=" w-96 m-4 p-2 border-2 h-10 rounded-lg focus:outline-blue-400">
-                <option value="">--Select a state--</option>
-                <option value="andhra-pradesh">Andhra Pradesh</option>
-                <option value="arunachal-pradesh">Arunachal Pradesh</option>
-                <option value="assam">Assam</option>
-                <option value="bihar">Bihar</option>
-                <option value="chhattisgarh">Chhattisgarh</option>
-                <option value="goa">Goa</option>
-                <option value="gujarat">Gujarat</option>
-                <option value="haryana">Haryana</option>
-                <option value="himachal-pradesh">Himachal Pradesh</option>
-                <option value="jharkhand">Jharkhand</option>
-                <option value="karnataka">Karnataka</option>
-                <option value="kerala">Kerala</option>
-                <option value="madhya-pradesh">Madhya Pradesh</option>
-                <option value="maharashtra">Maharashtra</option>
-                <option value="manipur">Manipur</option>
-                <option value="meghalaya">Meghalaya</option>
-                <option value="mizoram">Mizoram</option>
-                <option value="nagaland">Nagaland</option>
-                <option value="odisha">Odisha</option>
-                <option value="punjab">Punjab</option>
-                <option value="rajasthan">Rajasthan</option>
-                <option value="sikkim">Sikkim</option>
-                <option value="tamil-nadu">Tamil Nadu</option>
-                <option value="telangana">Telangana</option>
-                <option value="tripura">Tripura</option>
-                <option value="uttar-pradesh">Uttar Pradesh</option>
-                <option value="uttarakhand">Uttarakhand</option>
-                <option value="west-bengal">West Bengal</option>
-            </select>
-        </label>
-
-        <label for="Landmark">
-            <input type="text" name="landmark" minlength="4" placeholder="Landmark" class="bg-white font-normal m-4 p-4 rounded-lg h-10 w-96 border-2
-        focus:outline-blue-400 ">
-        </label>
-
-        <label for="alt_number">
-            <input type="tel" name="alt_number" placeholder="Alternate number" pattern="[0-9]{10}" class="bg-white font-normal m-4 p-4 rounded-lg border-2 h-10 w-96
-         focus:outline-blue-400">
-        </label>
-        <button class="h-10 w-full bg-yellow-400 rounded-full">Order now</button>
-    </form>
+            <div class="flex flex-col">
+                <label for="pincode" class="text-sm font-medium mb-1">Pincode <span
+                        class="text-red-500">*</span></label>
+                <input type="number" name="pincode" placeholder="e.g. 847228" pattern="[0-9]{6}" required
+                    class="bg-gray-100 p-3 rounded-md border border-gray-300 focus:outline-blue-400">
+            </div>
+            <div class="flex flex-col">
+                <label for="locality" class="text-sm font-medium mb-1">Locality <span
+                        class="text-red-500">*</span></label>
+                <input type="text" name="locality" minlength="4" placeholder="e.g. Kaluahi" required
+                    class="bg-gray-100 p-3 rounded-md border border-gray-300 focus:outline-blue-400">
+            </div>
+            <div class="flex flex-col col-span-1 md:col-span-2">
+                <label for="address" class="text-sm font-medium mb-1">Full Address <span
+                        class="text-red-500">*</span></label>
+                <textarea name="address" minlength="4" rows="3" placeholder="House number, Street, Area"
+                    class="bg-gray-100 p-3 rounded-md border border-gray-300 focus:outline-blue-400 resize-none"
+                    required></textarea>
+            </div>
+            <div class="flex flex-col">
+                <label for="city" class="text-sm font-medium mb-1">City/District/Town <span
+                        class="text-red-500">*</span></label>
+                <input type="text" name="city" minlength="4" placeholder="e.g. patna" required
+                    class="bg-gray-100 p-3 rounded-md border border-gray-300 focus:outline-blue-400">
+            </div>
+            <div class="flex flex-col">
+                <label for="state" class="text-sm font-medium mb-1">State <span class="text-red-500">*</span></label>
+                <select name="state" required
+                    class="bg-gray-100 p-3 rounded-md border border-gray-300 focus:outline-blue-400">
+                    <option value="">--Select a state--</option>
+                    <option value="andhra-pradesh">Andhra Pradesh</option>
+                    <option value="arunachal-pradesh">Arunachal Pradesh</option>
+                    <option value="assam">Assam</option>
+                    <option value="bihar">Bihar</option>
+                    <option value="chhattisgarh">Chhattisgarh</option>
+                    <option value="goa">Goa</option>
+                    <option value="gujarat">Gujarat</option>
+                    <option value="haryana">Haryana</option>
+                    <option value="himachal-pradesh">Himachal Pradesh</option>
+                    <option value="jharkhand">Jharkhand</option>
+                    <option value="karnataka">Karnataka</option>
+                    <option value="kerala">Kerala</option>
+                    <option value="madhya-pradesh">Madhya Pradesh</option>
+                    <option value="maharashtra">Maharashtra</option>
+                    <option value="manipur">Manipur</option>
+                    <option value="meghalaya">Meghalaya</option>
+                    <option value="mizoram">Mizoram</option>
+                    <option value="nagaland">Nagaland</option>
+                    <option value="odisha">Odisha</option>
+                    <option value="punjab">Punjab</option>
+                    <option value="rajasthan">Rajasthan</option>
+                    <option value="sikkim">Sikkim</option>
+                    <option value="tamil-nadu">Tamil Nadu</option>
+                    <option value="telangana">Telangana</option>
+                    <option value="tripura">Tripura</option>
+                    <option value="uttar-pradesh">Uttar Pradesh</option>
+                    <option value="uttarakhand">Uttarakhand</option>
+                    <option value="west-bengal">West Bengal</option>
+                </select>
+            </div>
+            <div class="flex flex-col">
+                <label for="landmark" class="text-sm font-medium mb-1">Landmark</label>
+                <input type="text" name="landmark" placeholder="Near mall, park, etc."
+                    class="bg-gray-100 p-3 rounded-md border border-gray-300 focus:outline-blue-400">
+            </div>
+            <div class="flex flex-col">
+                <label for="alt_number" class="text-sm font-medium mb-1">Alternate Mobile Number</label>
+                <input type="tel" name="alt_number" placeholder="10 digit alternate number" pattern="[0-9]{10}"
+                    class="bg-gray-100 p-3 rounded-md border border-gray-300 focus:outline-blue-400">
+            </div>
+            <div class="col-span-1 md:col-span-2">
+                <button type="submit"
+                    class="w-full h-12 bg-yellow-400 hover:bg-yellow-500 transition-colors duration-300 rounded-full text-lg font-semibold text-white">
+                    Place Order
+                </button>
+            </div>
+        </form>
+    </div>
 </body>
 
 </html>
