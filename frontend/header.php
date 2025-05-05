@@ -59,8 +59,8 @@
                 </div>
                 <div class="flex">
                     <!-- <img src="../images/2.png" alt="" class="object-cover h-10 w-10"> -->
-                    <a href="women.php" class="font-bold text-2xl pt-1 mx-3">Home</a>
-                    <a href="cart.php" class="font-bold text-2xl pt-1 mx-3">
+                    <a href="../frontend/women.php" class="font-bold text-2xl pt-1 mx-3">Home</a>
+                    <a href="../frontend/.php" class="font-bold text-2xl pt-1 mx-3">
                         Cart
                     </a> 
                     <a href="../backend/orderhistory_backend.php" class="font-bold text-2xl pt-1 mx-3">
