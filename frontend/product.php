@@ -11,26 +11,7 @@
     <h1 class="text-3xl font-bold font-serif text-center text-gray-800 mb-8">Add Product</h1>
     
     <form action="../backend/pro_backend.php" method="POST" enctype="multipart/form-data" class="space-y-6">
-      
-      <div>
-        <label class="block text-sm font-medium text-gray-700 mb-2">Product Price</label>
-        <input type="text" name="pro_price" placeholder="Enter product price"
-          class="w-full h-12 border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-400"/>
-      </div>
-
-      <div>
-        <label class="block text-sm font-medium text-gray-700 mb-2">Product Detail</label>
-        <input type="text" name="pro_det" placeholder="Enter product detail"
-          class="w-full h-12 border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-400"/>
-      </div>
-
-      <div>
-        <label class="block text-sm font-medium text-gray-700 mb-2">Product Image</label>
-        <input type="file" name="image"
-          class="w-full border border-gray-300 rounded-lg p-3 file:bg-yellow-400 file:border-none file:rounded file:px-4 file:py-2 file:text-white file:font-medium file:cursor-pointer hover:file:bg-yellow-500"/>
-      </div>
-
-      <div>
+       <div>
         <label class="block text-sm font-medium text-gray-700 mb-2">Select Category</label>
         <select name="pro_cat"
           class="w-full h-12 border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-400">
@@ -60,6 +41,26 @@
           ?>
         </select>
       </div>
+      
+      <div>
+        <label class="block text-sm font-medium text-gray-700 mb-2">Product Price</label>
+        <input type="text" name="pro_price" placeholder="Enter product price"
+          class="w-full h-12 border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-400"/>
+      </div>
+
+      <div>
+        <label class="block text-sm font-medium text-gray-700 mb-2">Product Detail</label>
+        <input type="text" name="pro_det" placeholder="Enter product detail"
+          class="w-full h-12 border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-400"/>
+      </div>
+
+      <div>
+        <label class="block text-sm font-medium text-gray-700 mb-2">Product Image</label>
+        <input type="file" name="image"
+          class="w-full border border-gray-300 rounded-lg p-3 file:bg-yellow-400 file:border-none file:rounded file:px-4 file:py-2 file:text-white file:font-medium file:cursor-pointer hover:file:bg-yellow-500"/>
+      </div>
+
+     
 
       <div class="pt-4">
         <button type="submit"
